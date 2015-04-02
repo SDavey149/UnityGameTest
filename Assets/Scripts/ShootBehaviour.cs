@@ -7,6 +7,7 @@ public class ShootBehaviour : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
+	private ParticleSystem muzzleFlash;
 
 
 	RaycastHit hit;
@@ -18,14 +19,17 @@ public class ShootBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerView = GameObject.FindWithTag ("MainCamera");
+		muzzleFlash = GameObject.Find ("ShotLocation").GetComponent<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		muzzleFlash.Stop();
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			ray.origin = playerView.transform.position;
 			ray.direction = playerView.transform.forward;
+			muzzleFlash.Play();
 
 			if (Physics.Raycast (ray, out hit, range)) {
 				nextFire = Time.time + fireRate;
