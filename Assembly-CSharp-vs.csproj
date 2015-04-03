@@ -49,13 +49,16 @@
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraLook.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Scripts\EnterDoor.cs" />
      <Compile Include="Assets\Scripts\HealthController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RobotBulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\RobotMovement.cs" />
      <Compile Include="Assets\Scripts\RobotShootBehaviour.cs" />
      <Compile Include="Assets\Scripts\ShootBehaviour.cs" />
+     <None Include="Assets\Dark Future\ReadMe.txt" />
      <None Include="Assets\Audio\MentalDreamsAssets\SoldierSoundsPack\ReadMe!.txt" />
+     <None Include="Assets\license.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>

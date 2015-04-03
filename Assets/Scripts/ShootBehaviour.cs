@@ -8,6 +8,7 @@ public class ShootBehaviour : MonoBehaviour {
 	public float fireRate;
 	private float nextFire;
 	private ParticleSystem muzzleFlash;
+	public int inflictedDamage;
 
 
 	RaycastHit hit;
@@ -30,13 +31,15 @@ public class ShootBehaviour : MonoBehaviour {
 			ray.origin = playerView.transform.position;
 			ray.direction = playerView.transform.forward;
 			muzzleFlash.Play();
-
+			audio.Play ();	
 			if (Physics.Raycast (ray, out hit, range)) {
 				nextFire = Time.time + fireRate;
-				GameObject bullet = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) as GameObject;
-				BulletBehaviour bb = bullet.GetComponent<BulletBehaviour>();
-				bb.target = hit.point;
-				audio.Play ();				
+				if (hit.collider.gameObject.tag == "Enemy") {
+					HealthController health = hit.collider.gameObject.GetComponent<HealthController> ();
+					if (health != null) {
+						health.RemoveHealth(inflictedDamage);
+					}
+				}			
 			}
 
 		}
