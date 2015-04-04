@@ -9,16 +9,12 @@ public class CameraLook : MonoBehaviour {
 	float pitch;
 	private float pitchVelocity = 0f;
 
-	void Start() {
+	void Awake() {
 		Screen.lockCursor = true;
 	}	
+	
 
 	void FixedUpdate() {
-
-
-	}
-
-	void LateUpdate() {
 		float mouseY = Input.GetAxis ("Mouse Y") * lookSpeed;
 		float newPitch = Mathf.Clamp (pitch + mouseY, -80, 70);
 		//make it smooth

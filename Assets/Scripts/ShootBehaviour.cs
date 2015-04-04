@@ -7,8 +7,9 @@ public class ShootBehaviour : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
-	private ParticleSystem muzzleFlash;
+	public ParticleSystem muzzleFlash;
 	public int inflictedDamage;
+	public Camera mainCamera;
 
 
 	RaycastHit hit;
@@ -19,8 +20,8 @@ public class ShootBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		playerView = GameObject.FindWithTag ("MainCamera");
-		muzzleFlash = GameObject.Find ("ShotLocation").GetComponent<ParticleSystem> ();
+		//playerView = GameObject.FindWithTag("MainCamera");
+		//muzzleFlash = GameObject.Find ("ShotLocation").GetComponent<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
@@ -28,15 +29,18 @@ public class ShootBehaviour : MonoBehaviour {
 		muzzleFlash.Stop();
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
-			ray.origin = playerView.transform.position;
-			ray.direction = playerView.transform.forward;
+			ray.origin = mainCamera.transform.position;
+			ray.direction = mainCamera.transform.forward;
 			muzzleFlash.Play();
 			audio.Play ();	
+			Debug.DrawRay(ray.origin, ray.direction);
 			if (Physics.Raycast (ray, out hit, range)) {
 				nextFire = Time.time + fireRate;
+				Debug.Log (hit.collider.gameObject.tag);
 				if (hit.collider.gameObject.tag == "Enemy") {
 					HealthController health = hit.collider.gameObject.GetComponent<HealthController> ();
 					if (health != null) {
+						Debug.Log("Removed health");
 						health.RemoveHealth(inflictedDamage);
 					}
 				}			
