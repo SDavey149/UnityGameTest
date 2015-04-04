@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\RobotShootBehaviour.cs" />
      <Compile Include="Assets\Scripts\ShootBehaviour.cs" />
      <None Include="Assets\Dark Future\ReadMe.txt" />
+     <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Audio\MentalDreamsAssets\SoldierSoundsPack\ReadMe!.txt" />
      <None Include="Assets\license.txt" />
  <Reference Include="UnityEngine.UI">
