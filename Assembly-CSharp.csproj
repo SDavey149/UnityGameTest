@@ -46,9 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DisplaySparks.cs" />
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraLook.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnterDoor.cs" />
      <Compile Include="Assets\Scripts\HealthController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />

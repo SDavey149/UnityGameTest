@@ -39,9 +39,11 @@ public class ShootBehaviour : MonoBehaviour {
 				Debug.Log (hit.collider.gameObject.tag);
 				if (hit.collider.gameObject.tag == "Enemy") {
 					HealthController health = hit.collider.gameObject.GetComponent<HealthController> ();
+					DisplaySparks sparks = hit.collider.gameObject.GetComponent<DisplaySparks>();
 					if (health != null) {
 						Debug.Log("Removed health");
 						health.RemoveHealth(inflictedDamage);
+						sparks.PlayDamageParticles();
 					}
 				}			
 			}
