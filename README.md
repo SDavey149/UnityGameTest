@@ -6,4 +6,4 @@ Process of making this game was effectively nothing more than a learning process
 
 ![Gun firing at enemy](https://www.dropbox.com/s/ihh0flkw3a6sx9a/Screenshot%202015-04-22%2007.44.57.png?raw=1)
 
-![A heavily pixelated terrain](https://www.dropbox.com/s/szz9exaigwtnti8/Screenshot%202015-04-22%2008.12.05.png?dl=0)
+![A heavily pixelated terrain](https://www.dropbox.com/s/szz9exaigwtnti8/Screenshot%202015-04-22%2008.12.05.png?raw=1)
