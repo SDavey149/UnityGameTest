@@ -6,15 +6,54 @@ Direct3D:
     Vendor:   ATI
     VRAM:     481 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.129 seconds
+Platform assembly: C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.122 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Scott\Documents\Unity\CE318Assignment\game_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Scott\Documents\GitHub\CE318_Ass_Part_V2\game_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Reflective/VertexLit' - Pass '' shader state not supported
+UnloadTime: 7.008076 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 592.
+Total: 2.871480 ms (FindLiveObjects: 0.047516 ms CreateObjectMapping: 0.022678 ms MarkObjects: 0.382828 ms  DeleteObjects: 0.328292 ms)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Removed health
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+

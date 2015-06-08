@@ -10,15 +10,38 @@ public class PlayerController : MonoBehaviour {
 	public float jumpRate;
 	private float nextJump;
 	private float yaw;
+	public int ammo;
+	public int health;
+	public int score;
+
+	Repainter canvas;
 
 	private Animator anim;
-	//private AnimController controller;
+	ObjectSpawner spawner;
 	
 	private float yawVelocity = 0f;
 
+	void Awake() {
+		DontDestroyOnLoad (gameObject);
+
+	}
+
+	void OnLevelWasLoaded() {
+		gameObject.transform.position = GameObject.Find ("PlayerSpawnPoint").transform.position;
+		spawner = GameObject.Find ("EnemySpawner").GetComponent<ObjectSpawner> ();
+		canvas = GameObject.Find ("Canvas").GetComponent<Repainter> ();
+		canvas.RepaintAmmo (ammo);
+		canvas.RepaintHealth (health);
+		canvas.RepaintScore (score);
+	}
+
 	void Start() {
+		spawner = GameObject.Find ("EnemySpawner").GetComponent<ObjectSpawner> ();
 		anim = GetComponent<Animator> ();
-		//controller = GetComponent<AnimController> ();
+		canvas = GameObject.Find ("Canvas").GetComponent<Repainter> ();
+		canvas.RepaintAmmo (ammo);
+		canvas.RepaintHealth (health);
+		canvas.RepaintScore (score);
 	}
 	
 
@@ -27,11 +50,7 @@ public class PlayerController : MonoBehaviour {
 		yaw = Mathf.SmoothDamp (yaw, yaw + mouseX, ref yawVelocity, 0.1f);
 		transform.rotation = Quaternion.Euler (0, yaw, 0);
 
-		float horiz = Input.GetAxis ("Horizontal");
 		float vertical = Input.GetAxis ("Vertical");
-		//Vector3 movement = new Vector3 (horiz, 0.0f, vertical);
-		//movement.Normalize ();
-		//rigidbody.AddRelativeForce(movement * speed, ForceMode.VelocityChange);
 		anim.SetFloat (Animator.StringToHash ("Speed"), vertical * speed);
 
 
@@ -41,5 +60,42 @@ public class PlayerController : MonoBehaviour {
 			audio.Play();
 		}
 
+	}
+
+	void Update() {
+		if (spawner.spawnAmount == 0 && GameObject.FindGameObjectsWithTag ("Enemy").Length == 0) {
+			//killed all the enemies!
+			Debug.Log ("killed enemies");
+			if (Application.loadedLevel == 1)
+				Application.LoadLevel(2);
+			else if (Application.loadedLevel == 2) {
+				Destroy(gameObject);
+				Application.LoadLevel(3);
+			}
+
+		};
+	}
+	public void AddAmmo(int add) {
+		ammo += add;
+		canvas.RepaintAmmo (ammo);
+
+	}
+
+	public void AddScore(int add) {
+		score += add;
+		canvas.RepaintScore (score);
+	}
+
+	public void AddHealth(int add) {
+		health += add;
+		if (health > 100)
+			health = 100; //max is 100
+		else if (health <= 0) {
+			Debug.Log ("died");
+			Destroy (gameObject);
+			Application.LoadLevel(4); //player died, game over
+		}
+			
+		canvas.RepaintHealth (health);
 	}
 }
